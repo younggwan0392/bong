@@ -1,0 +1,136 @@
+/* 봉글링 환영 이미지지 */
+.welcom{
+           
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+   }
+
+/* 로그아웃 부분분 */
+.admin{
+    float:right; 
+    margin-left: 10px;
+    margin-top: 18px;
+}
+
+.list{
+    background-color: rgb(247, 238, 233);
+    border-radius: 10px;
+    border-color  :aliceblue; 
+    text-align: center;
+    font-size: large;
+}
+
+.logout{
+    background-color: rgb(235, 195, 171);
+    border-radius: 8px;
+    border: none;
+    color: rgb(19, 11, 11);
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nopage{          
+    font-size: small;
+}
+
+.blog{
+    padding: 2px 45px;
+    margin-top: 8px;
+    margin-left: 2px;
+    font-weight: bold;
+    
+}
+
+/* 표 부분분 */
+.chart{
+    float:left; 
+    padding-top: 2%;
+    text-align: center;
+    margin-left: 8px;
+}
+
+.ctitle{
+    color:rgb(13, 13, 14);
+    border-radius: 10px;
+    
+}
+
+.num{
+    width: 70px;
+}
+
+.idinfo{
+    width:  100px;
+    height: 10px;
+}
+
+.tdinfo{
+    width:  180px;
+    height: 40px;
+}
+
+.tddate{
+    width:  200px;
+    height: 40px;
+}
+
+.thead{
+    color:rgb(255, 255, 255);
+    background: linear-gradient(to right, #dd5e89, #f7bb97);
+}
+
+.tbody1{
+    background: linear-gradient(to right, #d7dde8, #757f9a);
+}
+
+.tbody2{
+    background: linear-gradient(to right, #A0B8C5 146px, #EEF2F3 546px);
+}
+
+/* 메뉴 부분 */
+.menu{
+    float:right; line-height: 300%;
+    margin-bottom: 1500px;
+} 
+
+.flist{
+    background-color: rgb(247, 238, 233);
+    border-radius: 10px;
+    border-color  :aliceblue; 
+    text-align: center;
+    font-size: large;
+}
+
+/* 페이지지 버튼 */
+.pagebnt{
+    margin-top: 5px;
+    
+}
+
+/* form 검색 */
+.forms{
+    margin-left: 290px;
+    margin-top: 5px;
+}
+
+.domain{
+    width:250px;
+    height: 100;
+}
+ /* page 고정 */
+ .wrap {
+    z-index: 1;
+    width: 1200px;
+    height: auto;
+    position: relative;
+}   

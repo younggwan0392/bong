@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>봉글링 4마리 관리자 포털</title>
+        <link rel ="stylesheet" href="/bongnet.css"/>
+        <style>
+        br{
+            padding-bottom: 30px;
+        }
+
+        a{
+            color: black;
+        }
+
+        ul, li{
+            display: inline;
+            margin-left: 15px;
+        }
+        button[type = "button"]{
+            border: none;
+            background: transparent;
+            z-index: 2;
+        }
+        </style>
+    </head>
+    <body style="background-image:url(https://i.ibb.co/V9Z50QY/bg.png)">
+        <div class = "wrap">
+            <div>
+                <div>
+                    <img src="https://i.ibb.co/rQYspP8/01.png" class = "welcom" alt="봉글링 4마리 관리자 페이지">
+                </div>
+                <div class = "admin">
+                    <fieldset class = "list">
+                        <legend><b>&nbsp;관리자 로그인&nbsp;</b></legend>
+                        <label for="login"></label>
+                        <input type="button" value="로그아웃" onclick="location.href='/'" class="logout"><br></button>
+                        <a href="noPage.html" class="nopage">마이페이지</a>&nbsp;
+                        <a href="noPage.html" class="nopage">회원정보 수정</a><br>
+                        <input type="button" value="봉글링 블로그" onclick="location.href='noPage.html'" class = "blog"><br></button>
+                    </fieldset>
+                </div>
+                <div class="chart">
+                    <table border="1">
+                        <caption class="ctitle">
+                            <img src="https://i.ibb.co/tXqTG73/04.png">
+                        </caption>
+                        <thead>
+                            <tr class="thead">
+                                <th class = "num"><h3>NO.</h2></th>
+                                <th class = "idinfo"><h3>ID</h2></th>
+                                <th class = "tdinfo"><h3>출발지 IP</h2></th>
+                                <th class = "tdinfo"><h3>목적지 IP</h2></th>
+                                <th class = "tdinfo"><h3>DOMAIN</h2></th>
+                                <th class = "tdinfo"><h3>DATE</h2></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i = 0; i < post.length; i++) { %>
+                            <tr class="tbody1">
+                                <td class = "no"><h3><%= i+1%></h3></td>
+                                <td class = "idinfo"><h3>정김넨네</h3></td>
+                                <td class = "tdinfo"><h3><%= post[i].src_ip%></h3></td>
+                                <td class = "tdinfo"><h3><%= post[i].des_ip%></h3></td>
+                                <td class = "tdinfo"><h3><%= post[i].host_name%></h3></td>
+                                <td class = "tddate"><h3><%= post[i].date %></h3></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+                <br><br><br><br><br><br><br><br>
+                <div class = "menu">
+                    <fieldset class = "flist">
+                        <legend><b>&nbsp;메뉴 &nbsp;</b></legend>
+                            <a href="bongnet"> <img src="https://i.ibb.co/BLmPDch/02.png" alt="방문 사이트 목록"><br></a>
+                            <a href="blockList"> <img src="https://i.ibb.co/yPgsQRd/03.png" alt="Blocked list"><br></a>
+                            <a href="noPage.html"> <img src="https://i.ibb.co/BnsjqV5/04.png" alt="관리자 회원 정보"><br></a>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class = "pagebnt">
+                    <ul>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li><input type="button" value = "처음"></li>
+                        <li><input type="button" value = "이전"></li>
+                        <li><input type="button" value = "1"></li>
+                        <li><input type="button" value = "2"></li>
+                        <li><input type="button" value = "3"></li>
+                        <li><input type="button" value = "4"></li>
+                        <li><input type="button" value = "5"></li>
+                        <li><input type="button" value = "다음"></li>
+                        <li><input type="button" value = "마지막"></li>
+                    </ul>
+                </div>
+                <div class = "forms">
+                    <form>
+                        <select id = "search">
+                            <optgroup label = "검색">
+                                <option value="도메인">도메인</option>
+                                <option value="날짜">날짜</option>
+                                <option value="IP">IP</option>
+                            </optgroup> 
+                        </select>&nbsp;&nbsp;
+                        <label><input type="text" title = "검색하기" class="domain">&nbsp;
+                        <input type="submit" value="검색" style="width:80px;">
+                        <label for = "search"></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

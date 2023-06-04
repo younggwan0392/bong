@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <h1></h1>
+            <meta charset="utf-8">
+            <title>BLOCK_LIST</title>
+            <script>
+            </script>
+            <style>
+                .button{
+                    background-color: rgb(235, 195, 171);
+
+                    border-radius: 8px;
+
+                    border: none;
+
+                    color: rgb(19, 11, 11);
+
+                    padding: 15px 35px;
+
+                    text-align: center;
+
+                    text-decoration: none;
+
+                    font-weight: bold;
+
+                    display: inline-block;
+
+                    margin-top: 10px;
+
+                    margin-left: 10px;
+
+                    margin-right: 10px;
+
+                    margin-bottom: 5px;
+
+                    font-size: 16px;
+
+                    cursor: pointer;
+                    
+                    margin-left : 160px;
+
+                    margin-top : 30px
+            }
+                fieldset{
+                    width: 500px;
+                    height: 3
+                    00px;
+                }
+                input[ type="submit" ] {
+                    margin-top: 15px;
+                    height: 30px;
+                }
+                input[ type = "text"]{
+                    width: 300px;
+                    height: 20px;
+                }
+
+            .idinfo{
+                    width:  1000px;
+                    height: 30px;
+                    border: solid 1px black;
+                    text-align: center;
+            }
+                
+            .thead{
+                    color:rgb(255, 255, 255);
+                    background: linear-gradient(to right, #dd5e89, #f7bb97);
+                    width :400px;
+                    height : 20px;
+            }
+            .idinfo{
+                    width:  700px;
+                    height: 40px;
+            }
+            .tbody1{
+                    background: linear-gradient(to right, #d7dde8, #757f9a);
+                    width :400px;
+                    height : 20px;
+            }
+            .tbody2{
+                    background: linear-gradient(to right, #A0B8C5 146px, #EEF2F3 546px);
+                    width :400px;
+                    height : 20px;
+            }
+            .welcom{
+            height: 50%;
+            width: 50%;
+            object-fit:cover;
+            }
+          
+            </style>
+
+        </head>
+        <body style="background-image:url(https://i.ibb.co/V9Z50QY/bg.png)">
+            <div>
+                <img src="https://i.ibb.co/rQYspP8/01.png" class = "welcom" alt="봉글링 4마리 관리자 페이지">
+            </div>
+            <div style="width: 530px;  margin-top: 50px; margin-bottom: 50px;">
+                <form method = "post" action = "/app.js" >  
+                    <fieldset>
+                        <label>도메인 검색&nbsp;&nbsp;&nbsp;<input name = "select" type="text" title = "도메인 검색">&nbsp;
+                        <input  type="submit" value = "Enter"  style= "width: 50px;"></label>
+                        <br>
+                        <label>도메인 추가&nbsp;&nbsp;&nbsp;<input name = "add" type="text" title = "도메인 추가">&nbsp;
+                        <input  type="submit" value = "Enter" style= "width: 50px;"></label>
+                        <br>
+                        <label>도메인 삭제&nbsp;&nbsp;&nbsp;<input name = "drop" type="text" title = "도메인 삭제">&nbsp;
+                        <input  type="submit" value = "Enter" style= "width: 50px;"></label>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div style=" width: 420px; margin-left: 55px;"> 
+                <table border ="1">
+                    <tr class = "thead">    
+                        <th class = "idinfo"><h2>Block List</h2></th>    
+                    </tr>
+                    <%for(let i = 0; i < title.length ; i ++) { %>
+                    <tr style = "text-align: center;"><td class = "tbody2"><h3><%=title[i]%></h3></td></tr>
+                    <% } %>
+                    
+                </table>
+            </div>
+            <div> 
+                <input type="button" value="관리자 페이지로"class="button" onclick="location.href='/bongnet'"><br></button>
+            </div>
+        </body>
+    </html>
